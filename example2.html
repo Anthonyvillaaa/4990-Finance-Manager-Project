@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Finance Manager</h1>
+
+  
+  
+  <!-- Income Form -->
+  <section id="income-section">
+    <h2>Income Form</h2>
+    <label class="description-label">Input income information in the following form: </label>
+    <form id="income-form">
+      <div class="income-group">
+        <input type="text" name="source" placeholder="Income Source" required>
+        <input type="number" name="amount" placeholder="Amount" required>
+        <select name="frequency" required>
+          <option value="">Frequency</option>
+          <option value="Daily">Daily</option>
+          <option value="Weekly">Weekly</option>
+          <option value="Bi-Weekly">Bi-Weekly</option>
+          <option value="Monthly">Monthly</option>
+          <option value="Annually">Annually</option>
+          <option value="One-Time">One-Time</option>
+        </select>
+        <button class="remove-button" type="reset">&times;</button>
+      </div>
+      <button type="button" id="add-income">Add More Income</button>
+      <button type="submit">Submit Income</button>
+    </form>
+  </section>
+
+  <!-- Expense Form -->
+  <section id="expense-section">
+    <h2>Expense Form</h2>
+    <label class="description-label">Input expense information in the following form: </label>
+    <form id="expense-form">
+      <div class="expense-group">
+        <select name="category" required>
+          <option value="">Select Category</option>
+          <option value="Rent">Rent</option>
+          <option value="Groceries">Groceries</option>
+          <option value="Utilities">Utilities</option>
+          <option value="Transportation">Transportation</option>
+        </select>
+        <input type="number" name="amount" placeholder="Amount" required>
+        <select name="frequency" required>
+          <option value="">Frequency</option>
+          <option value="Daily">Daily</option>
+          <option value="Weekly">Weekly</option>
+          <option value="Bi-Weekly">Bi-Weekly</option>
+          <option value="Monthly">Monthly</option>
+          <option value="Annually">Annually</option>
+          <option value="One-Time">One-Time</option>
+        </select>
+        <input type="text" name="description" placeholder="Description (Optional)">
+        <button class="remove-button" type="reset">&times;</button>
+      </div>
+      <button type="button" id="add-expense">Add More Expense</button>
+      <button type="submit">Submit Expenses</button>
+    </form>
+  </section>
+
+  <!-- Goals Form -->
+  <section id="goals-section">
+    <h2>Financial Goals</h2>
+    <label class="description-label">Set your financial goals below: </label>
+    <form id="goals-form">
+      <div class="goal-group">
+        <input type="text" name="goal-name" placeholder="Goal Name" required>
+        <input type="number" name="target-amount" placeholder="Target Amount" required>
+        <input type="date" name="deadline" placeholder="Deadline" required>
+        <button class="remove-button" type="reset">&times;</button>
+      </div>
+      <button type="button" id="add-goal">Add More Goals</button>
+      <button type="submit">Submit Goals</button>
+    </form>
+  </section>
+
+  <!-- Analyze Finances -->
+  <section id="analyze-finances">
+    <button id="analyze-button">Analyze Finances</button>
+  </section>
+
+  <!-- Results Section -->
+  <section id="analysis-result" class="analysis-container">
+	<h2>Analysis Result</h2>
+	<h3>1. Budget Summary</h3>
+	<div class="table-container">
+	  <table>
+	    <thead>
+	      <tr>
+		<th>Category</th>
+		<th>Amount</th>
+	      </tr>
+	    </thead>
+	    <tbody id="budget-summary"></tbody>
+	  </table>
+	</div>
+      
+	<h3>2. Expense Breakdown</h3>
+	<div class="table-container">
+	  <table>
+	    <thead>
+	      <tr>
+		<th>Category</th>
+		<th>Amount</th>
+		<th>Frequency</th>
+	      </tr>
+	    </thead>
+	    <tbody id="expense-breakdown"></tbody>
+	  </table>
+	</div>
+      
+	<h3>3. Savings Suggestions</h3>
+	<ul id="savings-suggestions"></ul>
+      
+	<h3>4. Graphs</h3>
+	<canvas id="pieChart" width="400" height="200"></canvas>
+      
+	<h3>5. Goals Achievement Plan</h3>
+	<ul id="goals-achievement-plan"></ul>
+      </section>
+      
+
+  <script src="script.js"></script>
+</body>
+</html>

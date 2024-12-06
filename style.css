@@ -1,0 +1,174 @@
+/* styles.css */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f5f5f5;
+	color: #333;
+     }
+     
+     h1 {
+	text-align: center;
+	margin-top: 20px;
+     }
+     
+     section {
+	margin: 20px auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 80%;
+	max-width: 800px;
+     }
+
+     .description-label{
+	font-style: italic;
+	color: grey;
+     }
+     
+     form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding-top: 20px;
+     }
+     
+     .income-group,
+     .expense-group,
+     .goal-group {
+	display: flex;
+	gap: 10px;
+     }
+     
+     input, select, button {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+     }
+     
+     button {
+	cursor: pointer;
+	background-color: #007BFF;
+	color: white;
+	border: none;
+     }
+     
+     button:hover {
+	background-color: #0056b3;
+     }
+     
+     button[type="submit"] {
+	align-self: flex-end;
+     }
+
+     .remove-button{
+	position: relative;
+
+	background-color: white;
+	color: red;
+	border: 1px solid red;
+	width: 10px;
+	height: 10px;
+	line-height: 1;
+	display: flex;
+	justify-content: center;		/* center the content horizontally */
+	align-items: center;			/* center the content vertically */
+
+
+
+     }
+     .remove-button:hover{
+	color: white;
+	background-color:red;
+	border-color:white;
+
+     }
+
+     #analyze-button{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+     }
+
+     #analysis-result pre {
+	font-family: 'Courier New', Courier, monospace;
+	white-space: pre-wrap; /* Wrap lines */
+	word-wrap: break-word; /* Handle long words */
+	background-color: #f9f9f9;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	overflow-x: auto; /* Allow horizontal scrolling for long lines */
+      }
+      
+      
+   
+   h2, h3 {
+	color: #333;
+	border-bottom: 2px solid #ccc;
+	padding-bottom: 5px;
+   }
+   
+   .analysis-container {
+	margin: 20px 0;
+	padding: 20px;
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+      }
+      
+      .table-container {
+	margin: 15px 0;
+	overflow-x: auto;
+      }
+      
+      table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+      }
+      
+      table th, table td {
+	padding: 10px;
+	text-align: left;
+	border: 1px solid #ddd;
+      }
+      
+      table th {
+	background-color: #f4f4f4;
+	font-weight: bold;
+      }
+      
+      ul {
+	padding-left: 20px;
+      }
+      
+      ul li {
+	margin: 5px 0;
+      }
+
+      .analysis-container h3 {
+	margin-top: 20px;
+	color: #333;
+      }
+      
+      .analysis-container ul {
+	padding-left: 20px;
+      }
+      
+      .analysis-container ul li {
+	margin-bottom: 10px;
+      }
+      
+      canvas {
+	margin: 20px auto;
+	display: block;
+      }
+      
+      
+
+   
